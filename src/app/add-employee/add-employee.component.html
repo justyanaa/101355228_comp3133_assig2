@@ -1,0 +1,17 @@
+<form id="employeeForm" method="post" action="/">
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" #firstName name="firstName"><br>
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" #lastName name="lastName"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" #email id="email" name="email"><br>
+    <label for="gender">Gender:</label><br>
+    <select id="gender" #gender name="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br>
+    <label for="salary">Salary:</label><br>
+    <input type="text" #salary id="salary" name="salary"><br><br>
+    <button type="submit" (click)="addEmployee(firstName.value, lastName.value, email.value, gender.value, salary.value)" id="submitButton">Submit</button>
+  </form>

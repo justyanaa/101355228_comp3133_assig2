@@ -1,0 +1,24 @@
+<form id="employeeForm" method="post" action="/">
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="id" #id name="id" value={{employee._id}} hidden><br>
+    <input type="text" id="firstName" #firstName name="firstName" value={{employee.first_name}}><br>
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName"  #lastName name="lastName"  value={{employee.last_name}}><br>
+    <label for="email">Email:</label><br>
+    <input type="email" #email id="email" name="email"  value={{employee.email}}><br>
+    <label for="gender">Gender:</label><br>
+    <select id="gender" #gender name="gender">
+      
+      <option value="Male">Male</option>
+      @if(employee.gender=="Female"){
+        <option value="Female" selected>Female</option>
+      }@else{
+        <option value="Female" >Female</option>
+      }
+      
+      
+    </select><br>
+    <label for="salary">Salary:</label><br>
+    <input type="text" #salary id="salary" name="salary"  value={{employee.salary}}><br><br>
+    <button type="submit" (click)="editEmployee(id.value,firstName.value, lastName.value, email.value, gender.value, salary.value)" id="submitButton">Submit</button>
+  </form>

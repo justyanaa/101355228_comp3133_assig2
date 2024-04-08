@@ -1,0 +1,9 @@
+<form id="loginForm" method="post" action="/login" >
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" #username name="username"><br>
+    <label for="lastName">Password:</label><br>
+    <input type="password" id="password" #password name="password"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" #email name="email"><br>
+    <button type="submit" (click)="register(username.value, password.value,email.value)" id="submitButton">Register</button>
+  </form>

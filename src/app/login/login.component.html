@@ -1,0 +1,7 @@
+<form id="loginForm" method="post" action="/">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" #username name="username"><br>
+    <label for="lastName">password:</label><br>
+    <input type="password" id="password" #password name="password"><br>
+    <button type="submit" (click)="login(username.value, password.value)" id="submitButton">Login</button>
+  </form>

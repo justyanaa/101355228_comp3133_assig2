@@ -1,0 +1,28 @@
+
+
+<table id="employeeTable">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(employee of employeeData ; track employee.id ){
+           <tr>
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+            <a href="/editemployee/{{employee._id}}" class="editButton">Edit</a>
+            <button (click)="deleteEmployee(employee._id)" class="deleteButton">Delete</button></td>
+        </tr> 
+        }
+    </tbody>
+  </table>
+  
